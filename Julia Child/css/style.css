@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Cambo&family=Padyakke+Expanded+One&family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+
+:root {
+    --main_color: #101014;
+    --font_color: #e1e1e6;
+    --font: 'Satisfy', cursive;
+    --main_font: 'EB Garamond', serif;
+    --font_size: 1.5rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: var(--main_color);
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #e1e1e658;
+    transition: all 0.3s ease-in-out 0.2s;
+    border-radius: 25px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #e1e1e66a;
+    transition: all 0.3s ease-in-out 0.2s;
+}
+
+/* header */
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    height: 8rem;
+    width: 100%;
+    background-color: #000000;
+    z-index: 1;
+}
+
+.header_link {
+    font-size: 3rem;
+    color: var(--font_color);
+    font-family: 'Satisfy', cursive;
+    margin-right: 50rem;
+    text-decoration: none;
+}
+
+.link {
+    transition: all 0.4s ease-in-out;
+    text-decoration: none;
+}
+
+.link:hover {
+    transition: all 0.4s ease-in-out;
+    transform: scale(1.2);
+}
+
+/* Lists */
+
+
+.lists {
+    display: flex;
+    flex-direction: row;
+    gap: 6rem;
+}
+
+.link {
+    font-family: var(--font);
+    list-style: none;
+    text-decoration: none;
+    color: var(--font_color);
+    font-size: var(--font_size);
+}
+
+.btn_link {
+    text-decoration: none;
+}
+
+.btn {
+    background-color: transparent;
+    border: 1px solid #e1e1e6;
+    border-radius: 15px;
+    width: 7rem;
+    font-family: var(--font);
+    color: var(--font_color);
+    font-size: var(--font_size);
+    transition: all 0.4s ease-in-out;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #e1e1e660;
+    transition: all 0.4s ease-in-out;
+    transform: scale(1.1);
+
+}
+
+/* Hero */
+
+.hero {
+    width: 100%;
+    height: 100vh;
+    color: var(--font_color);
+    font-size: 2.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20rem;
+    animation: transition 1s linear forwards;
+}
+
+.julia_img {
+    width: 35rem;
+    height: 35rem;
+    border-radius: 50%;
+    margin-bottom: 5rem;
+
+}
+
+.main_header {
+    font-family: var(--font);
+
+}
+
+.quote {
+    font-family: var(--main_font);
+
+
+}
+
+.hero_btn {
+    background-color: transparent;
+    border: 1px solid #e1e1e6;
+    border-radius: 15px;
+    width: 7rem;
+
+    transition: all 0.4s ease-in-out;
+    font-family: var(--main_font);
+    color: var(--font_color);
+    font-size: var(--font_size);
+
+}
+
+.hero_btn:hover {
+    background-color: #e1e1e660;
+    transition: all 0.4s ease-in-out;
+    transform: scale(1.1);
+
+    cursor: pointer;
+}
+
+.hero_link {
+    text-decoration: none;
+}
+
+.scroll {
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 90%;
+    animation: MoveUpDown 1.5s linear infinite;
+    -webkit-animation: MoveUpDown 1.5s linear infinite;
+}
+
+.scroll_text {
+    transform: translateY(1rem);
+    font-size: 1.6rem;
+    color: #e1e1e673;
+}
+
+.scroll_icon {
+    width: 4rem;
+}
+
+/* About */
+
+.about {
+    height: 70vh;
+    width: 100%;
+    background-color: #e1e1e658;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.julia_pic {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.julia_life {
+    font-family: var(--font);
+    font-size: 3rem;
+}
+
+.julia_life_img {
+    border-radius: 15px;
+    width: 45rem;
+}
+
+.about_julia {
+    width: 50rem;
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+}
+
+.about_julia h1 {
+    font-family: var(--font);
+    color: var(--font_color);
+    font-size: 3rem;
+}
+
+.about_julia p {
+    color: var(--font_color);
+    font-size: var(--font_size);
+    margin-bottom: 2rem;
+}
+
+.more_link {
+    text-decoration: underline;
+    color: var(--font_color);
+    font-size: var(--font_size);
+
+}
+
+.more_link:hover {
+    transform: scale(1.2);
+    transition: all 0.4s ease-in-out;
+}
+
+/* Best Recipes */
+
+.recipes h1 {
+    font-size: 3rem;
+    font-family: var(--font);
+    color: var(--font_color);
+}
+
+.recipes {
+    display: flex;
+    height: 70vh;
+    width: 100%;
+    flex-direction: row;
+    gap: 3rem;
+
+}
+
+/* Footer */
+
+footer {
+    background-color: #e1e1e658;
+    height: 10rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer div {
+    color: var(--font_color);
+    font-size: var(--font_size);
+
+}
+
+/* KeyFrames */
+
+@keyframes transition {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
+@keyframes MoveUpDown {
+
+    0%,
+    100% {
+        bottom: 0;
+
+    }
+
+    50% {
+        bottom: 2rem;
+
+    }
+}
