@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Cambo&family=Padyakke+Expanded+One&family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+
+:root {
+    --main_color: #101014;
+    --background: #454655;
+    --background_color: #e1e1e658;
+    --font_color: #e1e1e6;
+    --font: 'Satisfy', cursive;
+    --main_font: 'EB Garamond', serif;
+    --font_size: 1.5rem;
+    --login_font: 'Work Sans', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: var(--main_color);
+    overflow-y: scroll;
+}
+
+/* Page Transition */
+.transition-out {
+    -o-transition: opacity 1s;
+    opacity: 0;
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -ms-transition: opacity 1s;
+    transition: opacity 1s;
+}
+
+.hero {
+    -webkit-animation: transition 1s linear forwards;
+    animation: transition 1s linear forwards;
+}
+
+header {
+    -webkit-animation: transition 0.5s linear forwards;
+    animation: transition 0.5s linear forwards;
+}
+
+/* Scrolling bar */
+
+body::-webkit-scrollbar {
+    width: 0;
+    background-color: transparent;
+}
+
+
+/* header */
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    height: 8rem;
+    width: 100%;
+    background-color: #000000;
+    z-index: 1;
+}
+
+.header_link {
+    font-size: 3rem;
+    color: var(--font_color);
+    font-family: 'Satisfy', cursive;
+    -webkit-user-select: none;
+    /* Chrome/Safari */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Standard */
+}
+
+.link {
+    font-family: var(--font);
+    -o-transition: all 0.4s ease-in-out;
+    cursor: pointer;
+    font-size: 2rem;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+.link:hover {
+    transition: all 0.4s ease-in-out;
+    transform: scale(1.2);
+}
