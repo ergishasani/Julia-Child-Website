@@ -358,6 +358,7 @@ footer a {
     text-decoration: underline;
     color: var(--font_color);
     font-size: var(--font_size);
+    width: fit-content;
 
 }
 
