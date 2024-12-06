@@ -163,9 +163,12 @@ footer a {
     font-size: 2.5rem;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    gap: 20rem;
+}
+
+.hero_div {
+    max-width: 40% !important;
 }
 
 .julia_img {
@@ -187,11 +190,13 @@ footer a {
 
 .main_header {
     font-family: var(--font);
+    max-width: 80%;
 
 }
 
 .quote {
     font-family: var(--main_font);
+    max-width: 80%;
 
 
 }
@@ -650,5 +655,85 @@ footer a {
     50% {
         bottom: 2rem;
 
+    }
+}
+
+
+
+@media screen and (max-width: 768px) {
+
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+    .hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .julia_img {
+        width: 20rem;
+        height: auto;
+        margin-bottom: 0 !important;
+        margin-top: 8rem;
+    }
+
+    .hero_div {
+        max-width: 100vw !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .main_header {
+        font-size: 3rem;
+    }
+
+    .quote {
+        font-size: 2rem;
+        width: 90%;
+    }
+
+
+    .about {
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+        height: 80vh;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .julia_pic {
+        max-width: 100% !important;
+    }
+
+    .about_julia {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+
+    .about_julia div {
+        display: flex;
+        width: 80%;
+        flex-direction: column;
+    }
+
+
+    .about_julia div p {
+
+        font-size: 1.3rem;
+        max-width: 100%;
+    }
+
+    .julia_life_img {
+        width: 20rem;
     }
 }
