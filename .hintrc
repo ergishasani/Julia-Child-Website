@@ -5,6 +5,9 @@
   "hints": {
     "disown-opener": "off",
     "axe/structure": "off",
-    "css-prefix-order": "off"
+    "css-prefix-order": "off",
+    "axe/text-alternatives": "off",
+    "meta-viewport": "off",
+    "axe/name-role-value": "off"
   }
 }

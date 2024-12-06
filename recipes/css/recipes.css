@@ -364,5 +364,36 @@ ul {
 
     .description {
         height: fit-content;
+        display: flex;
+
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .ingredients {
+
+        width: 90%;
+        height: 22rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        margin-left: 5rem;
+
+    }
+    .instructions{
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .ingredients h1,
+    .ingredients h2,
+    .ingredients ul,
+    .ingredients ul li,
+    .instructions h1,
+    .instructions ol,
+    .instructions ol li {
+        max-width: fit-content;
     }
 }
