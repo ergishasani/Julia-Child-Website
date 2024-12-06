@@ -428,6 +428,7 @@ footer a {
     text-decoration: none;
     color: var(--font_color);
     font-size: var(--font_size);
+    cursor: pointer;
 }
 
 .btn_link {

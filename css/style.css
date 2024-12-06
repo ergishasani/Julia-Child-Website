@@ -79,8 +79,11 @@ header {
 .lists {
     display: flex;
     gap: 20px;
+    
 }
-
+.link{
+    cursor: pointer;
+}
 .lists ul {
     list-style: none;
     display: flex;

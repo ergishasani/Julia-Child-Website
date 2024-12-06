@@ -419,6 +419,7 @@ footer a {
     display: flex;
     flex-direction: row;
     gap: 6rem;
+    cursor: pointer;
 }
 
 .link {
@@ -427,6 +428,7 @@ footer a {
     text-decoration: none;
     color: var(--font_color);
     font-size: var(--font_size);
+    cursor: pointer !important;
 }
 
 .btn_link {
@@ -460,7 +462,7 @@ footer a {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    align-items: center;
+    align-items: center;    
 
 }
 
@@ -642,6 +644,10 @@ ul {
     .container h1 {
         font-size: 2rem;
     }
+    .container {
+        margin-bottom: 2rem;
+    }
+
 
     .pie_img {
         max-width: 25rem;
@@ -651,8 +657,9 @@ ul {
 
     .recipe {
         max-width: 100%;
+
         justify-content: space-around;
-        gap: 0;
+        gap: 2;
     }
 
     .info p,
