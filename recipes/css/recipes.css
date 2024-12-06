@@ -326,3 +326,43 @@ ul {
 
     }
 }
+
+@media screen and (max-width: 768px) {
+
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+    .hero {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 100vh;
+    }
+
+    .container h1 {
+        font-size: 2rem;
+    }
+
+    .pie_img {
+        max-width: 25rem;
+        margin-top: 2rem;
+        height: auto;
+    }
+
+    .recipe {
+        max-width: 100%;
+        justify-content: space-around;
+        gap: 0;
+    }
+
+    .info p,
+    .recipe_info p {
+        font-size: 1.6rem;
+    }
+
+    .description {
+        height: fit-content;
+    }
+}

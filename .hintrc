@@ -4,6 +4,7 @@
   ],
   "hints": {
     "disown-opener": "off",
-    "axe/structure": "off"
+    "axe/structure": "off",
+    "css-prefix-order": "off"
   }
 }
