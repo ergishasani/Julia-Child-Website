@@ -235,5 +235,28 @@ footer a {
 }
 
 @media screen and (max-width: 768px) {
-    
+
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+    .hero {
+        height: fit-content;
+        margin-bottom: 2rem;
+    }
+
+    .recipe_cont {
+        max-width: 25rem;
+        overflow-x: scroll;
+    }
+
+    .hero div h1 {
+        margin-top: 1rem !important;
+        font-size: 3rem;
+    }
+
+    .soup {
+        margin-top: 10rem;
+    }
 }
