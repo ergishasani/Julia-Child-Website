@@ -56,44 +56,342 @@ body::-webkit-scrollbar {
 }
 
 
-/* header */
+/* Header Section */
 header {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    padding: 20px 40px;
     position: fixed;
+    width: 100vw;
     top: 0;
-    height: 8rem;
-    width: 100%;
-    background-color: #000000;
-    z-index: 1;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
-.header_link {
-    font-size: 3rem;
+.nav_links {
     color: var(--font_color);
+    font-size: 3rem;
+    font-weight: bold;
+    text-decoration: none;
     font-family: 'Satisfy', cursive;
-    margin-right: 50rem;
-    text-decoration: none;
-    -webkit-user-select: none;
-    /* Chrome/Safari */
-    -moz-user-select: none;
-    /* Firefox */
-    -ms-user-select: none;
-    /* Internet Explorer/Edge */
-    user-select: none;
-    /* Standard */
 }
 
-.link {
-    transition: all 0.4s ease-in-out;
+/* Navigation Links */
+.lists {
+    display: flex;
+    gap: 20px;
+}
+
+.lists ul {
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}
+
+.lists ul li a {
     text-decoration: none;
+    color: #fff;
+    font-size: 1.6rem;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.lists ul li a:hover {
+    color: var(--gold);
+}
+
+/* Burger Menu */
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
     cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 20px;
 }
 
-.link:hover {
+.burger-menu span {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+.burger-menu.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+    background-color: #fff;
+}
+
+.burger-menu.open span:nth-child(2) {
+    opacity: 0;
+    background-color: #fff;
+}
+
+.burger-menu.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+    background-color: #fff;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .lists {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 250px;
+        height: 100vh;
+        background-color: #333;
+        color: #fff;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        transition: right 0.3s ease;
+    }
+
+    .lists.active {
+        right: 0;
+    }
+
+    .burger-menu {
+        display: flex;
+    }
+
+    .lists ul {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+
+
+
+/* Header Section */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.logo a {
+    color: var(--font_color);
+    font-size: 3rem;
+    font-weight: bold;
+
+    text-decoration: none;
+    font-family: var(--font);
+    /* Elegant font for logo */
+}
+
+/* Navigation Links */
+.nav_links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav_links ul {
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}
+
+.nav_links ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.6rem;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.nav_links ul li a:hover {
+    color: var(--gold);
+}
+
+/* Dropdown Container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Trigger */
+.dropdown>a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    display: inline-flex;
+    /* Align the trigger properly */
+    align-items: center;
+    /* Center text and icon */
+}
+
+.dropdown>a:hover {
+    color: var(--gold);
+}
+
+/* Dropdown Content */
+.dropdown-content {
+    display: none;
+    /* Hidden by default */
+    position: absolute;
+    top: 100%;
+    /* Align directly below the trigger */
+    left: 0;
+    background-color: #444;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 10px 0;
+    z-index: 10;
+    min-width: 180px;
+    /* Ensures consistent width */
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Dropdown Links */
+.dropdown-content li {
+    list-style: none;
+}
+
+.dropdown-content li a {
+    display: flex;
+    align-items: center;
+    padding: 8px 15px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-content li a img {
+    margin-right: 10px;
+    /* Adds space between the flag and text */
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    /* Makes icons circular for aesthetics */
+}
+
+.dropdown-content li a:hover {
+    background-color: #555;
+    /* Highlight effect */
+    color: var(--gold);
+}
+
+/* Adjust the default state of the dropdown for non-hover */
+.dropdown-content {
+    visibility: hidden;
+    /* Ensures no visual issues when not hovered */
+    opacity: 0;
+    transform: translateY(-10px);
+    /* Slightly hidden above */
+    transition: all 0.3s ease-in-out;
+}
+
+/* When hovered */
+.dropdown:hover .dropdown-content {
+    visibility: visible;
+    /* Make visible on hover */
+    opacity: 1;
+    transform: translateY(0);
+    /* Slide into position */
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .dropdown-content {
+        left: auto;
+        right: 0;
+        /* Align dropdown to the right on smaller screens */
+    }
+}
+
+/* Burger Menu */
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.burger-menu span {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+/* Rotate burger lines when active */
+.burger-menu.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.burger-menu.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-menu.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .nav_links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 250px;
+        height: 100vh;
+        background-color: #333;
+        color: #fff;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        transition: right 0.3s ease;
+    }
+
+    .nav_links.active {
+        right: 0;
+    }
+
+    .burger-menu {
+        display: flex;
+    }
+
+    .nav_links ul {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+
+.btn {
+    background-color: transparent;
+    border: 1px solid #e1e1e6;
+    border-radius: 15px;
+    width: 7rem;
+    font-family: var(--font);
+    color: var(--font_color);
+    font-size: var(--font_size);
     transition: all 0.4s ease-in-out;
-    transform: scale(1.2);
+    cursor: pointer;
 }
 
 /* Footer */
